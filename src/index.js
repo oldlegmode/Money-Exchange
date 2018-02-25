@@ -11,9 +11,9 @@ function makeExchange(currency) {
     }
 
     let H = currency / 50 >= 1 ? Math.floor(currency / 50) : 0;
-    let Q = (currency - 50 * H) / 25 > 1 ? Math.floor((currency - 50 * H) / 25) : 0;
-    let D = (currency - 50 * H - 25 * Q) / 10 > 1 ? Math.floor((currency - 50 * H - 25 * Q) / 10) : 0;
-    let N = (currency - 50 * H - 25 * Q - 10 * D) / 5 > 1 ? Math.floor((currency - 50 * H - 25 * Q - 10 * D) / 5) : 0;
+    let Q = (currency - 50 * H) / 25 >= 1 ? Math.floor((currency - 50 * H) / 25) : 0;
+    let D = (currency - 50 * H - 25 * Q) / 10 >= 1 ? Math.floor((currency - 50 * H - 25 * Q) / 10) : 0;
+    let N = (currency - 50 * H - 25 * Q - 10 * D) / 5 >= 1 ? Math.floor((currency - 50 * H - 25 * Q - 10 * D) / 5) : 0;
     let P = currency - 50 * H - 25 * Q - 10 * D - 5 * N;
     let result = { H, Q, D, N, P };
 
